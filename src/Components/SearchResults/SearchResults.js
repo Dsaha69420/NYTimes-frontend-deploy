@@ -9,7 +9,7 @@ const SearchResults = () => {
             const response = await fetch(`${process.env.REACT_APP_API_URL}?q=${query}`);
             //if (!response.ok) throw new Error("Failed to fetch articles");
             const data = await response.json();
-            console.log(data);
+            
             setArticles(data.response.docs); // Set articles data
         } catch (error) {
             console.error(error.message);
